@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+          header {
+      background: #4facfe;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .room {
+            background: white;
+            width: 300px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .room img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .room h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .room .price {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+        .room ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .room ul li {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
+        }
+        .room ul li i {
+            color: #3498db;
+            margin-right: 8px;
+        }
+        .room button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .room button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+     <header>
+    <h1>🏨 TSM Super Hostel </h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="book.html">Our Rooms</a>
+      <a href="index.html">Contact</a>
+      <a href="user login.html">Login</a>
+    </nav>
+  </header>
+    <div class="container">
+        <!-- VIP Room -->
+        <div class="room">
+            <img src="vip.jpg" alt="">
+            <h3>VIP Room</h3>
+            <p class="price">৳5,000 / Night</p>
+            <ul>
+                <li><i class="fas fa-bed"></i> King-size Bed</li>
+                <li><i class="fas fa-wifi"></i> High-Speed Wi-Fi</li>
+                <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                <li><i class="fas fa-concierge-bell"></i> 24/7 Room Service</li>
+                <li><i class="fas fa-tv"></i> Smart TV</li>
+                <li><i class="fas fa-hot-tub"></i> Private Balcony</li>
+            </ul>
+            <button onclick="openBookingForm('VIP Room')"><a href="booking.html">Booking now</a></button>
+        </div>
+
+        <!-- AC Room -->
+        <div class="room">
+            <img src="ac.webp" alt="">
+            <h3>AC Room</h3>
+            <p class="price">৳3,500 / Night</p>
+            <ul>
+                <li><i class="fas fa-bed"></i> Queen-size Bed</li>
+                <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+                <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                <li><i class="fas fa-concierge-bell"></i> 24/7 Room Service</li>
+                <li><i class="fas fa-tv"></i> Flat Screen TV</li>
+            </ul>
+            <button onclick="openBookingForm('AC Room')"><a href="booking.html">Booking Now</a></button>
+        </div>
+
+        <!-- Non-AC Room -->
+        <div class="room">
+            <img src="n2.jpg" alt="">
+            <h3>Non-AC Room</h3>
+            <p class="price">৳2,000 / Night</p>
+            <ul>
+                <li><i class="fas fa-bed"></i> Double Bed</li>
+                <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+                <li><i class="fas fa-fan"></i> Ceiling Fan</li>
+                <li><i class="fas fa-concierge-bell"></i> Room Service</li>
+                <li><i class="fas fa-tv"></i> TV</li>
+            </ul>
+            <button onclick="openBookingForm('Non-AC Room')"><a href="booking.html">Booking Now</a></button>
+        </div>
+
+        <!-- Business Class Room -->
+        <div class="room">
+            <img src="b2.jpg" alt="">
+            <h3>Business Class Room</h3>
+            <p class="price">৳4,500 / Night</p>
+            <ul>
+                <li><i class="fas fa-bed"></i> King-size Bed</li>
+                <li><i class="fas fa-wifi"></i> High-Speed Wi-Fi</li>
+                <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                <li><i class="fas fa-briefcase"></i> Work Desk</li>
+                <li><i class="fas fa-coffee"></i> Coffee Maker</li>
+                <li><i class="fas fa-tv"></i> Smart TV</li>
+            </ul>
+            <button onclick="openBookingForm('Business Class Room')"><a href="booking.html">Booking Now</a></button>
+        </div>
+    </div>
+
+</body>
+</html>

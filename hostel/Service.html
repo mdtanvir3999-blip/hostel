@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Hostel Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+ header {
+      background: #4facfe;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+        .services-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        .button{
+            background-color: aqua;
+            border: #1a73e8;
+            padding: 0%;
+            margin: auto;
+            color: #12d262;
+        }
+        }
+    </style>
+</head>
+<body>
+     <header>
+    <h1>🏨 TSM Super Hostel </h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="book.html">Our Rooms</a>
+      <a href="index.html">Contact</a>
+      <a href="user login.html">Login</a>
+    </nav>
+  </header>
+
+
+    <section class="services-section">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Explore the range of amenities and services we offer to make your stay comfortable and enjoyable.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="room hostel.webp" alt="Comfortable Rooms">
+                    <h3>Comfortable Rooms</h3>
+                    <p>Spacious and well-furnished rooms with single, double, and dormitory options to suit your needs.</p>
+                    <button><a href="book.html">More</a></button>
+                </div>
+                <div class="service-card">
+                   <img src="food.png" alt="Healthy Meals">
+                    <h3>Healthy Meals</h3>
+                    <p>Delicious and nutritious meals prepared daily, with vegetarian and non-vegetarian options.</p>
+                    <button><a href="Healthy meals.html">More</a></button>
+                </div>
+                <div class="service-card">
+                    <img src="wifi.webp" alt="High-Speed Wi-Fi">
+                    <h3>High-Speed Wi-Fi</h3>
+                    <p>Stay connected with our reliable, high-speed internet available throughout the hostel.</p>
+                     <button ><a href="wifi.html">More</a></button>
+                </div>
+                <div class="service-card">
+                    <img src="londey.webp" alt="Laundry ServicesSS">
+                    <h3>Laundry Services</h3>
+                    <p>Convenient laundry facilities to keep your clothes clean and fresh during your stay.</p>
+                     <button><a href="londey.html">More</a></button>
+                </div>
+                <div class="service-card">
+                    <img src="securety.jpg" alt="24/7 Security">
+                    <h3>24/7 Security</h3>
+                    <p>Round-the-clock security with CCTV and staff to ensure your safety and peace of mind.</p>
+                     <button><a href="security.html">More</a></button>
+                </div>
+                <div class="service-card">
+                    <img src="play.webp" alt="Recreational Area">
+                    <h3>Recreational Area</h3>
+                    <p>Enjoy our common room with games, TV, and a cozy space to relax and socialize.</p>
+                     <button><a href="Area.html">More</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TSM Super Hostel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

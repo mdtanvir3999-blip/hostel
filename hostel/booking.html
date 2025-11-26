@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        .form-group i {
+            color: #3498db;
+            margin-right: 8px;
+        }
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fas fa-hotel"></i> Book Your Room</h2>
+        <form action="booking.php" method="POST">
+            <div class="form-group">
+                <label for="roomType"><i class="fas fa-bed"></i> Room Type</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="" disabled>Select Room Type</option>
+                    <option value="VIP Room">VIP Room - ৳5,000 / Night</option>
+                    <option value="AC Room">AC Room - ৳3,500 / Night</option>
+                    <option value="Non-AC Room">Non-AC Room - ৳2,000 / Night</option>
+                    <option value="Business Class Room">Business Class Room - ৳4,500 / Night</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div class="error" id="fullNameError">Please enter your full name.</div>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <div class="error" id="phoneError">Please enter a valid phone number.</div>
+            </div>
+            <div class="form-group">
+                <label for="checkIn"><i class="fas fa-calendar-check"></i> Check-In Date</label>
+                <input type="date" id="checkIn" name="checkIn" required>
+                <div class="error" id="checkInError">Please select a check-in date.</div>
+            </div>
+            <div class="form-group">
+                <label for="checkOut"><i class="fas fa-calendar-times"></i> Check-Out Date</label>
+                <input type="date" id="checkOut" name="checkOut" required>
+                <div class="error" id="checkOutError">Please select a check-out date.</div>
+            </div>
+            <div class="form-group">
+                <label for="guests"><i class="fas fa-users"></i> Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                <div class="error" id="guestsError">Please enter the number of guests (at least 1).</div>
+            </div>
+            <button type="submit" class="submit-btn">Submit Booking</button>
+        </form>
+        <a href="book.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Room Selection</a>
+    </div>
+
+  
+</body>
+</html>

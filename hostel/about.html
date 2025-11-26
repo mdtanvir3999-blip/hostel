@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelElite - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: #f1f5f9;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+  header {
+      background: #4facfe;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+        /* About Hero Section */
+        .about-hero {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644') no-repeat center/cover;
+            position: relative;
+            color: white;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+            z-index: 1;
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .about-hero h2 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .about-hero p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-hero .btn {
+            background: linear-gradient(45deg, #f97316, #fb923c);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .about-hero .btn:hover {
+            background: linear-gradient(45deg, #ea580c, #f97316);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            font-size: 2.8rem;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideUp 1s ease-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #f97316;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #e2e8f0, #f1f5f9);
+            text-align: center;
+        }
+
+        .stats-section h2 {
+            font-size: 2.8rem;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: #f97316;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2.8rem;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card h4 {
+            font-size: 1.2rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-hero h2 {
+                font-size: 2.8rem;
+            }
+
+            .about-hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-hero .btn {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+
+            .features-section h2, .stats-section h2, .testimonial-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .about-hero .btn {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            .feature-card, .stat-card, .testimonial-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+    <h1>🏨 TSM Super Hostel </h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="book.html">Our Rooms</a>
+      <a href="index.html">Contact</a>
+      <a href="user login.html">Login</a>
+    </nav>
+  </header>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h2>About TSM Super Hostel</h2>
+            <p>TSM Super Hostel is redefining hostel living by blending cutting-edge technology with a passion for comfort and community. We provide a seamless experience for students and professionals, ensuring their stay is secure, convenient, and unforgettable.</p>
+            <a href="Service.html" class="btn">Explore Our Features</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Our Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Easy Booking</h3>
+                    <p>Reserve your room in minutes with our intuitive online platform, available 24/7.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payments</h3>
+                    <p>Pay with confidence using our encrypted and transparent payment system.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Premium Amenities</h3>
+                    <p>Enjoy high-speed Wi-Fi, laundry services, delicious meals, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Vibrant Community</h3>
+                    <p>Join our community with events and activities that make you feel at home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Our Achievements</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="counter" data-target="1000">0</h3>
+                    <p>Happy Residents</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Rooms Available</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Locations Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 200;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCounter();
+        });
+    </script>
+</body>
+</html>
